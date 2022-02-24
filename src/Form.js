@@ -7,8 +7,13 @@ const Form = ({ setTodos }) => {
     event.preventDefault(); // Without this, new item appears then disappears after render
 
     setTodos((currTodos) => {
-      return [newTodo, ...currTodos];
+      if (newTodo === '') {
+        return [...currTodos]; //Prevent empty items being added to to-do list
+      } else {
+        return [newTodo, ...currTodos];
+      }
     });
+
     setNewTodo(''); //Resetting the form after submitting
   };
 
