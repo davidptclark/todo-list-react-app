@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Header';
+import Form from './Form';
 import TodoList from './Todo-list';
 import { useState } from 'react';
 
@@ -8,7 +9,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* we'll come back to the form tomorrow - setToDo will but passed into Form */}
+      <Form setTodos={setTodos} />
+      {/* Remember to keep the names consistent for prop reference! */}
+      {/* Uses function from state to add tasks submitted via form */}
       <TodoList todos={todos} />{' '}
       {/* uses initial state to populate To-Do list */}
     </div>
