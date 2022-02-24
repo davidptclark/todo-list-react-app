@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.remove-todo {
+  margin-left: 10px;
+}
