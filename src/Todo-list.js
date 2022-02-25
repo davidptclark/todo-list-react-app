@@ -1,10 +1,14 @@
-const TodoList = ({ todo, index, removeToDo }) => {
+const TodoList = ({ todos, removeToDo }) => {
   return (
     <ul>
-      <li key={index}>
-        {todo.text}
-        <button onClick={() => removeToDo(index)}>x</button>
-      </li>
+      {todos.map((todo, index) => {
+        return (
+          <li key={index}>
+            {todo.text}
+            <button onClick={() => removeToDo(index)}>x</button>
+          </li>
+        );
+      })}
     </ul>
   );
 };

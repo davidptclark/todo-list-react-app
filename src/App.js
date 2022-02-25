@@ -28,9 +28,7 @@ function App() {
       <Form addTodo={addTodo} />
       {/* Remember to keep the names consistent for prop reference! */}
       {/* Uses function from state to add tasks submitted via form */}
-      {todos.map((todo, index) => (
-        <TodoList key={index} todo={todo} removeToDo={removeToDo} />
-      ))}
+      <TodoList todos={todos} removeToDo={removeToDo} />
       {/* uses initial state to populate To-Do list */}
     </div>
   );
