@@ -20,7 +20,9 @@ function App() {
       <Form setTodos={setTodos} />
       {/* Remember to keep the names consistent for prop reference! */}
       {/* Uses function from state to add tasks submitted via form */}
-      <TodoList todos={todos} setTodos={setTodos} />
+      <div className="container" id="todo-list">
+        <TodoList todos={todos} setTodos={setTodos} />
+      </div>
       {/* uses initial state to populate To-Do list */}
     </div>
   );

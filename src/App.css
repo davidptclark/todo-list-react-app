@@ -1,7 +1,31 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* HACK: Keep in mind that flex containers influence children's behaviors */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.remove-todo {
-  margin-left: 10px;
+.todo-items {
+  margin: 10px 0px 10px 0px;
+  padding: 10px 5px 10px 5px;
+  width: 400px;
+  display: inline-block;
+  border-style: solid;
+}
+
+.buttons {
+  float: right;
+}
+
+#todo-list {
+  width: 400px;
+  height: 500px;
+  padding-top: 50px;
 }

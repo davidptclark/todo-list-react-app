@@ -27,6 +27,7 @@ const Form = ({ setTodos }) => {
       <label>
         Add a new To-Do:
         <input
+          class="todo-form"
           value={newTodo}
           //This onChange is reading the incoming changes via e.t.v and updating the state
           onChange={(event) => setNewTodo(event.target.value)}
