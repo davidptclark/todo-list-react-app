@@ -12,12 +12,16 @@
   align-items: flex-start;
 }
 
-.todo-items {
+.todo-item {
   margin: 10px 0px 10px 0px;
   padding: 10px 5px 10px 5px;
   width: 400px;
   display: inline-block;
   border-style: solid;
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 .buttons {
