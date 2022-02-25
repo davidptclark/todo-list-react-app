@@ -1,14 +1,10 @@
-const TodoList = (props) => {
+const TodoList = ({ todo, index, removeToDo }) => {
   return (
     <ul>
-      {props.todos.map((todo) => {
-        return (
-          <li key={todo}>
-            {todo}
-            <input type="checkbox" />
-          </li>
-        );
-      })}
+      <li key={index}>
+        {todo.text}
+        <button onClick={() => removeToDo(index)}>x</button>
+      </li>
     </ul>
   );
 };

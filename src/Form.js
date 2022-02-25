@@ -1,20 +1,17 @@
 import { useState } from 'react';
 
-const Form = ({ setTodos }) => {
+const Form = ({ addTodo }) => {
+  //Bringing in the add function
   const [newTodo, setNewTodo] = useState('');
 
   const sumbitTodo = (event) => {
     event.preventDefault(); // Without this, new item appears then disappears after render
-
-    setTodos((currTodos) => {
-      if (newTodo === '') {
-        return [...currTodos]; //Prevent empty items being added to to-do list
-      } else {
-        return [newTodo, ...currTodos];
-      }
-    });
-
-    setNewTodo(''); //Resetting the form after submitting
+    if (!newTodo) {
+      return; //Prevent empty items being added to to-do list
+    } else {
+      addTodo(newTodo);
+      setNewTodo(''); //Resetting the form after submitting
+    }
   };
 
   return (
